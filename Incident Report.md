@@ -1,4 +1,4 @@
-# 🚨 Incident Report: SSH Brute Force Attack Detection
+# Incident Report: SSH Brute Force Attack Detection
 
 ![Type](https://img.shields.io/badge/Incident%20Type-Brute%20Force-red) ![Severity](https://img.shields.io/badge/Severity-Medium--High-orange) ![Status](https://img.shields.io/badge/Status-Resolved-brightgreen) ![MITRE](https://img.shields.io/badge/MITRE-T1110%20Brute%20Force-blue)
 
@@ -37,7 +37,7 @@ A brute force attack targeting the SSH service was simulated and successfully de
 
 ## 4. Detection & Analysis
 
-### 🔍 Detection
+### Detection
 
 The attack was detected through **Wazuh SIEM**, which generated alerts indicating:
 
@@ -45,7 +45,7 @@ The attack was detected through **Wazuh SIEM**, which generated alerts indicatin
 - Repeated login attempts from a single source IP
 - Maximum authentication attempts exceeded
 
-### 📋 Log Evidence
+### Log Evidence
 
 The following entries were observed in `/var/log/auth.log`:
 
@@ -55,7 +55,7 @@ Failed password for user from 192.168.1.119 port 60078 ssh2
 Failed password for user from 192.168.1.119 port 57266 ssh2
 ```
 
-### 🧠 Analysis
+### Analysis
 
 | Field              | Details                                         |
 |--------------------|-------------------------------------------------|
