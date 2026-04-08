@@ -5,7 +5,9 @@
 ## Overview
 
 This project simulates a brute force attack against an SSH service and demonstrates detection, analysis, and response using Wazuh SIEM. The objective was to replicate a real-world SOC scenario involving credential access attempts and log-based detection.
+Brute force attacks are one of the most common techniques used to gain unauthorized access to systems. This lab demonstrates how SOC analysts detect and respond to such attacks using SIEM tools and log analysis.
 
+This project reflects real-world SOC operations, including alert triage, investigation, and incident response.
 ---
 
 ## Lab Architecture
@@ -15,6 +17,17 @@ This project simulates a brute force attack against an SSH service and demonstra
 | Attacker | Kali Linux         | Hydra |
 | Target   | Ubuntu Server      | SSH   |
 | SIEM     | Wazuh              | —     |
+
+---
+
+## SOC Workflow
+
+1. Attack Simulation (Hydra brute force)
+2. Log Generation (/var/log/auth.log)
+3. Log Ingestion (Wazuh Agent → Manager)
+4. Alert Generation (SIEM rules triggered)
+5. Investigation (log correlation + IP analysis)
+6. Response (IP blocking + SSH hardening)
 
 ---
 
