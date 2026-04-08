@@ -8,6 +8,7 @@ This project simulates a brute force attack against an SSH service and demonstra
 Brute force attacks are one of the most common techniques used to gain unauthorized access to systems. This lab demonstrates how SOC analysts detect and respond to such attacks using SIEM tools and log analysis.
 
 This project reflects real-world SOC operations, including alert triage, investigation, and incident response.
+
 ---
 
 ## Lab Architecture
