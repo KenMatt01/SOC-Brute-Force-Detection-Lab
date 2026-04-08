@@ -77,13 +77,16 @@ This confirmed repeated unauthorized access attempts from the attacker machine.
 ## 📸 Screenshots
 
 ### Attack — Hydra
-> *Screenshot placeholder: Hydra brute force output*
+<img width="917" height="397" alt="Hydra Attacks" src="https://github.com/user-attachments/assets/68c03c96-d74a-4cdb-8157-141135353088" />
+
 
 ### Wazuh Alerts
-> *Screenshot placeholder: Wazuh alert dashboard*
+<img width="1875" height="807" alt="Wazuh Alerts" src="https://github.com/user-attachments/assets/be3ce0a8-0e82-48b3-ac12-8dffdc8e7224" />
+
 
 ### Authentication Logs
-> *Screenshot placeholder: /var/log/auth.log entries*
+<img width="1229" height="521" alt="Logs" src="https://github.com/user-attachments/assets/4e351abf-2581-4075-bbcf-c213b6e13522" />
+
 
 ---
 
@@ -109,9 +112,9 @@ This confirmed repeated unauthorized access attempts from the attacker machine.
 
 ## 🚀 Future Improvements
 
-- [ ] Add privilege escalation detection
-- [ ] Implement automated response (SOAR integration)
-- [ ] Extend to multi-attack scenarios
+- Add privilege escalation detection
+- Implement automated response (SOAR integration)
+- Extend to multi-attack scenarios
 
 ---
 
