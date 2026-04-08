@@ -5,7 +5,6 @@ This project simulates a brute force attack against an SSH service and demonstra
 
 The objective was to replicate a real-world SOC scenario involving credential access attempts and log-based detection.
 
----
 
 ## 🧠 Lab Architecture
 
@@ -13,7 +12,6 @@ The objective was to replicate a real-world SOC scenario involving credential ac
 - **Target:** Ubuntu Server (SSH enabled)
 - **SIEM:** Wazuh
 
----
 
 ## ⚔️ Attack Simulation
 
