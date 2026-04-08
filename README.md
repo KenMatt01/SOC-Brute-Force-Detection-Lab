@@ -1,14 +1,14 @@
-# 🚨 SSH Brute Force Detection Lab (Wazuh SIEM)
+# SSH Brute Force Detection Lab (Wazuh SIEM)
 
 ![Security](https://img.shields.io/badge/Category-Cybersecurity-red) ![SIEM](https://img.shields.io/badge/SIEM-Wazuh-blue) ![MITRE](https://img.shields.io/badge/MITRE-T1110%20Brute%20Force-orange) ![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
 
-## 📌 Overview
+## Overview
 
 This project simulates a brute force attack against an SSH service and demonstrates detection, analysis, and response using Wazuh SIEM. The objective was to replicate a real-world SOC scenario involving credential access attempts and log-based detection.
 
 ---
 
-## 🧠 Lab Architecture
+## Lab Architecture
 
 | Role     | System             | Tool  |
 |----------|--------------------|-------|
@@ -18,7 +18,7 @@ This project simulates a brute force attack against an SSH service and demonstra
 
 ---
 
-## ⚔️ Attack Simulation
+## Attack Simulation
 
 A brute force attack was launched using **Hydra**:
 
@@ -30,7 +30,7 @@ This generated multiple failed authentication attempts against the SSH service.
 
 ---
 
-## 🔍 Detection (Wazuh SIEM)
+## Detection (Wazuh SIEM)
 
 Wazuh detected the activity and generated the following alerts:
 
@@ -46,7 +46,7 @@ Wazuh detected the activity and generated the following alerts:
 
 ---
 
-## 📊 Log Analysis
+## Log Analysis
 
 Relevant logs were observed in:
 
@@ -64,7 +64,7 @@ This confirmed repeated unauthorized access attempts from the attacker machine.
 
 ---
 
-## 🛡️ Response Actions
+## Response Actions
 
 1. **Identified** attacker IP address from logs
 2. **Simulated** blocking via firewall rules
@@ -74,7 +74,7 @@ This confirmed repeated unauthorized access attempts from the attacker machine.
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 ### Attack — Hydra
 <img width="917" height="397" alt="Hydra Attacks" src="https://github.com/user-attachments/assets/68c03c96-d74a-4cdb-8157-141135353088" />
@@ -90,7 +90,7 @@ This confirmed repeated unauthorized access attempts from the attacker machine.
 
 ---
 
-## ⚙️ Tools Used
+## Tools Used
 
 | Tool          | Purpose                        |
 |---------------|--------------------------------|
@@ -101,7 +101,7 @@ This confirmed repeated unauthorized access attempts from the attacker machine.
 
 ---
 
-## 🎯 Key Learnings
+## Key Learnings
 
 - SIEM-based detection of brute force attacks
 - Log correlation and alert analysis
@@ -110,7 +110,7 @@ This confirmed repeated unauthorized access attempts from the attacker machine.
 
 ---
 
-## 🚀 Future Improvements
+## Future Improvements
 
 - Add privilege escalation detection
 - Implement automated response (SOAR integration)
