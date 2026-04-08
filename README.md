@@ -85,6 +85,10 @@ This confirmed repeated unauthorized access attempts from the attacker machine.
 3. **Recommended** SSH hardening measures:
    - Disable password authentication
    - Enforce key-based login only
+4. **ON Target System**
+```
+sudo iptables -A INPUT -s <attacker-ip> -j DROP
+```
 
 ---
 
