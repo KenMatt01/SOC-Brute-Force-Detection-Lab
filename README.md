@@ -1,21 +1,118 @@
 # 🚨 SSH Brute Force Detection Lab (Wazuh SIEM)
 
+![Security](https://img.shields.io/badge/Category-Cybersecurity-red) ![SIEM](https://img.shields.io/badge/SIEM-Wazuh-blue) ![MITRE](https://img.shields.io/badge/MITRE-T1110%20Brute%20Force-orange) ![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
+
 ## 📌 Overview
-This project simulates a brute force attack against an SSH service and demonstrates detection, analysis, and response using Wazuh SIEM.
 
-The objective was to replicate a real-world SOC scenario involving credential access attempts and log-based detection.
+This project simulates a brute force attack against an SSH service and demonstrates detection, analysis, and response using Wazuh SIEM. The objective was to replicate a real-world SOC scenario involving credential access attempts and log-based detection.
 
+---
 
 ## 🧠 Lab Architecture
 
-- **Attacker:** Kali Linux (Hydra)
-- **Target:** Ubuntu Server (SSH enabled)
-- **SIEM:** Wazuh
+| Role     | System             | Tool  |
+|----------|--------------------|-------|
+| Attacker | Kali Linux         | Hydra |
+| Target   | Ubuntu Server      | SSH   |
+| SIEM     | Wazuh              | —     |
 
+---
 
 ## ⚔️ Attack Simulation
 
-A brute force attack was launched using Hydra:
+A brute force attack was launched using **Hydra**:
 
 ```bash
-hydra -l user -P /usr/share/wordlists/rockyou.txt ssh://<target-ip>
+hydra -l user -P rockyou.txt ssh://<target-ip>
+```
+
+This generated multiple failed authentication attempts against the SSH service.
+
+---
+
+## 🔍 Detection (Wazuh SIEM)
+
+Wazuh detected the activity and generated the following alerts:
+
+- 🔴 Multiple authentication failures
+- 🔴 Maximum authentication attempts exceeded
+- 🔴 PAM: User login failed
+
+**MITRE ATT&CK Mapping:**
+
+| Technique ID | Name        |
+|--------------|-------------|
+| [T1110](https://attack.mitre.org/techniques/T1110/) | Brute Force |
+
+---
+
+## 📊 Log Analysis
+
+Relevant logs were observed in:
+
+```
+/var/log/auth.log
+```
+
+**Example log entry:**
+
+```
+Failed password for user from 192.168.x.x port xxxx ssh2
+```
+
+This confirmed repeated unauthorized access attempts from the attacker machine.
+
+---
+
+## 🛡️ Response Actions
+
+1. **Identified** attacker IP address from logs
+2. **Simulated** blocking via firewall rules
+3. **Recommended** SSH hardening measures:
+   - Disable password authentication
+   - Enforce key-based login only
+
+---
+
+## 📸 Screenshots
+
+### Attack — Hydra
+> *Screenshot placeholder: Hydra brute force output*
+
+### Wazuh Alerts
+> *Screenshot placeholder: Wazuh alert dashboard*
+
+### Authentication Logs
+> *Screenshot placeholder: /var/log/auth.log entries*
+
+---
+
+## ⚙️ Tools Used
+
+| Tool          | Purpose                        |
+|---------------|--------------------------------|
+| Wazuh SIEM    | Alert generation & log analysis |
+| Kali Linux    | Attacker machine               |
+| Hydra         | Brute force tool               |
+| Ubuntu Server | Target machine (SSH)           |
+
+---
+
+## 🎯 Key Learnings
+
+- SIEM-based detection of brute force attacks
+- Log correlation and alert analysis
+- Mapping events to MITRE ATT&CK framework
+- Incident response workflow in a SOC context
+
+---
+
+## 🚀 Future Improvements
+
+- [ ] Add privilege escalation detection
+- [ ] Implement automated response (SOAR integration)
+- [ ] Extend to multi-attack scenarios
+
+---
+
+> ⚠️ **Disclaimer:** This lab was conducted in a controlled, isolated environment for educational purposes only. Do not attempt to replicate these techniques on systems you do not own or have explicit permission to test.
