@@ -83,6 +83,8 @@ This confirmed repeated unauthorized access attempts from the attacker machine.
 ### Wazuh Alerts
 <img width="1875" height="807" alt="Wazuh Alerts" src="https://github.com/user-attachments/assets/be3ce0a8-0e82-48b3-ac12-8dffdc8e7224" />
 
+<img width="1880" height="344" alt="charts" src="https://github.com/user-attachments/assets/458bd325-4153-4a52-94f2-96bfdf0202c1" />
+
 
 ### Authentication Logs
 <img width="1229" height="521" alt="Logs" src="https://github.com/user-attachments/assets/4e351abf-2581-4075-bbcf-c213b6e13522" />
